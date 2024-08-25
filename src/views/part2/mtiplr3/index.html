@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #results{
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+        .all_materials_item {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.3s ease;
+        }
+
+        .all_materials_item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .all_materials_item {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Пошук</h2>
+    <form>
+        <label for="query">Введіть запит:</label>
+        <input type="text" id="query" placeholder="Введіть текст для пошуку...">
+        <label for="results">Результати:</label>
+        <div id="results"></div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('query').addEventListener('keyup', function(event) {
+        const query = event.target.value;
+
+        if (query.length >= 3) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/src/views/part2/mtiplr3/1krsearch.php?query=' + encodeURIComponent(query), true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('results').innerHTML = xhr.responseText;
+                    let items = document.getElementsByClassName('all_materials_item');
+                    for (let i = 0; i < items.length; i++) {
+                        items[i].addEventListener('click', function(event) {
+                            event.preventDefault();
+                            console.log(event.target)
+                            let url = 'https://1kr.ua' + event.target.parentElement.getAttribute('href');
+                            window.open(url, '_blank');
+                        });
+                    }
+                }
+            };
+
+            xhr.send();
+
+        } else {
+            document.getElementById('results').value = ''; // Очищуємо результати, якщо запит коротший
+        }
+    });
+</script>
+</body>
+</html>

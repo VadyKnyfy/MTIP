@@ -1,0 +1,17 @@
+{
+    "0":{
+      "name": "Умова",
+      "url": "conditions.pdf#toolbar=0",
+      "infotype": "condition"
+    },
+    "2":{
+      "name": "XML",
+      "url": "lab7.xml",
+      "infotype": "markup"
+    },
+    "3": {
+      "name": "Схема",
+      "url": "lr7MTIP.png",
+      "infotype": "image"
+    }
+}

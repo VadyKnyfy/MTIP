@@ -1,0 +1,304 @@
+#pdfViewer {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Скрытие панели управления PDF viewer */
+#pdfViewer #outerContainer #mainContainer div.toolbar {
+    display: none !important;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+main{
+    height: 100%;
+}
+*{
+    margin: 0;
+}
+@font-face {
+    font-family: e-Ukraine-Regular;
+    src: url("../../fonts/e-Ukraine/e-Ukraine-Regular.otf");
+    font-weight: normal;
+    font-style:  normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: e-Ukraine-Thin;
+    src: url("../../fonts/e-Ukraine/e-Ukraine-Thin.otf");
+    font-weight: normal;
+    font-style:  normal;
+    font-display: block;
+}
+@font-face {
+    font-family: e-Ukraine-Light;
+    src: url("../../fonts/e-Ukraine/e-Ukraine-Light.otf");
+    font-weight: normal;
+    font-style:  normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: e-Ukraine-Bold;
+    src: url("../../fonts/e-Ukraine/e-Ukraine-Bold.otf");
+    font-weight: normal;
+    font-style:  normal;
+    font-display: block;
+}
+
+
+main{
+    display: flex;
+}
+
+.aside {
+    width: 25%;
+    height: 100%;
+    border-right-width: 7px;
+    border-right-style: solid;
+    border-image: linear-gradient( 90deg, rgba(0, 0, 0, 0) 7%, rgba(24,223,230,0.583053204191833) 6%, rgba(0, 0, 0, 0) ) 44%;
+}
+.part{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.part_name{
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    border: 1px solid black;
+    width: 17rem;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color: #52e618;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , #52e618 70% , black 30%),
+    inset 0px 0px 0px 0px white;
+    transition: all .2s ease-in-out;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    & p{
+        font-family: e-Ukraine-Bold;
+        display: flex;
+        height: max-content;
+    }
+    & p:before{
+        content: "^"; /* Символ для розгортання */
+        margin-right: 8px; /* Відступ для символу */
+    }
+    & p:after {
+        content: "^"; /* Символ для розгортання */
+        margin-left: 8px; /* Відступ для символу */
+    }
+}
+/* Стили для тега dialog */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+body.modal-open {
+    overflow: hidden; /* Заблокувати прокручування сторінки під модальним вікном */
+}
+.part[closed="true"]{
+    .part_name{
+        & p:before{
+            content: "V"; /* Символ для розгортання */
+            margin-right: 8px; /* Відступ для символу */
+        }
+        & p:after {
+            content: "V"; /* Символ для розгортання */
+            margin-left: 8px; /* Відступ для символу */
+        }
+    }
+}
+
+
+#nav_menu1 {
+    .select_item {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        background-color: #18dfe6;
+        border-radius: 1rem;
+        color: white;
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , #12dfe6 70% , black 30%),
+    inset 0px 0px 0px 0px white;
+    ;
+        transition: all .2s ease-in-out;
+        border-bottom: 1px solid white;
+        height: 3rem;
+        width: 17rem;
+        cursor: pointer;
+        & p{
+            font-family: e-Ukraine-Bold;
+            display: flex;
+            height: max-content;
+            margin-top: 0.8rem;
+        }
+    }
+
+    .select_item.notF{
+        background: lightgray;
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , lightgray 70% , black 30%);
+        cursor: not-allowed;
+    }
+    .select_item:not(.notF):not(.selected):hover{
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , #12dfe6 70% , black 30%), inset 0px -5px 5px .1px white;
+    }
+    .select_item.selected{
+        border-bottom-left-radius: 0rem;
+        border-top-left-radius: 0rem;
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , #12dfe6 70% , black 30%), inset 0px -5px 5px .1px #90ee92;
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+#nav_menu2 {
+    .select_item {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        background-color: #18dfe6;
+        border-radius: 1rem;
+        color: white;
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , #12dfe6 70% , black 30%),
+        inset 0px 0px 0px 0px white;
+    ;
+        transition: all .2s ease-in-out;
+        border-bottom: 1px solid white;
+        height: 3rem;
+        width: 17rem;
+        cursor: pointer;
+        & p{
+            font-family: e-Ukraine-Bold;
+            display: flex;
+            height: max-content;
+            margin-top: 0.8rem;
+        }
+    }
+
+    .select_item.notF{
+        background: lightgray;
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , lightgray 70% , black 30%);
+        cursor: not-allowed;
+    }
+    .select_item:not(.notF):not(.selected):hover{
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , #12dfe6 70% , black 30%), inset 0px -5px 5px .1px white;
+    }
+    .select_item.selected{
+        border-bottom-left-radius: 0rem;
+        border-top-left-radius: 0rem;
+        box-shadow: 2px 8px 10px 0.1px color-mix(in srgb , #12dfe6 70% , black 30%), inset 0px -5px 5px .1px #90ee92;
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.content{
+    width: 63%;
+    height: 100%;
+    padding-right: 8rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    #lab_header {
+        font-family: e-Ukraine-Thin;
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        padding-top: 1rem;
+        & h1{
+            margin-bottom: .7rem;
+            font-size: 2em;
+        }
+        & h2{
+            margin-bottom: .7rem;
+            font-size: 1.2em;
+        }
+        border-bottom-width: 7px;
+        border-bottom-style: solid;
+        border-image: linear-gradient( to bottom, rgba(0, 0, 0, 0) 7%, rgba(24,223,230,0.583053204191833) 6%, rgba(0, 0, 0, 0) ) 44%;
+
+    }
+    #lab_info{
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        #lab_menu{
+            display: flex;
+            gap: .5rem;
+            justify-content: center;
+            position: absolute;
+            .menu_select{
+                padding-top: .3rem;
+                border-bottom-right-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+                background: #12dfe6;
+                width: 7rem;
+                height: 2rem;
+                text-align: center;
+                font-family: e-Ukraine-Regular;
+                transition: all .4s ease-in-out;
+            }
+            .menu_select.selected{
+                height: 3rem;
+                background: #90ee92;
+                box-shadow: inset 0px 0px 10px 0.1px #12dfe6;
+                border-bottom-right-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+            }
+            .menu_select:not(.selected):hover{
+                transition: height .2s ease-in-out;
+                height: 2.3rem;
+                box-shadow: inset 0px 0px 10px 0.1px #90ee92;
+                cursor: pointer;
+            }
+        }
+        #info_container{
+            width: 100%;
+            height: 80%;
+            margin: .5rem;
+            margin-top: 4rem;
+            #infocode{
+                overflow: hidden;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: auto;
+                border: 1px solid;
+                .codeconteiner{
+                    white-space: pre-wrap;
+                    .token{
+                        background: unset !important;
+                    }
+                }
+            }
+        }
+    }
+}

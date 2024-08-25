@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="EMPLOYEES">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="EMPLOYEE"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="EMPLOYEE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="LAST_NAME"/>
+                <xs:element ref="FIRST_NAME"/>
+                <xs:element ref="MIDDLE_NAME"/>
+                <xs:element ref="ADDRESS"/>
+                <xs:element ref="PHONE"/>
+                <xs:element ref="POSITION"/>
+                <xs:element ref="DEPARTMENT"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LAST_NAME" type="xs:string"/>
+    <xs:element name="FIRST_NAME" type="xs:string"/>
+    <xs:element name="MIDDLE_NAME" type="xs:string"/>
+    <xs:element name="ADDRESS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="INDEX"/>
+                <xs:element ref="TYPE"/>
+                <xs:element ref="REGION"/>
+                <xs:element ref="DISTRICT"/>
+                <xs:element ref="CITY"/>
+                <xs:element ref="STREET"/>
+                <xs:element ref="HOUSE"/>
+                <xs:element ref="APARTMENT"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="INDEX" type="xs:integer"/>
+    <xs:element name="TYPE" type="xs:string"/>
+    <xs:element name="REGION" type="xs:string"/>
+    <xs:element name="DISTRICT" type="xs:string"/>
+    <xs:element name="CITY" type="xs:string"/>
+    <xs:element name="STREET" type="xs:string"/>
+    <xs:element name="HOUSE" type="xs:integer"/>
+    <xs:element name="APARTMENT" type="xs:integer"/>
+    <xs:element name="PHONE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="HOME"/>
+                <xs:element maxOccurs="unbounded" ref="MOBILE"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="HOME" type="xs:string"/>
+    <xs:element name="MOBILE" type="xs:string"/>
+    <xs:element name="POSITION" type="xs:string"/>
+    <xs:element name="DEPARTMENT" type="xs:string"/>
+</xs:schema>
