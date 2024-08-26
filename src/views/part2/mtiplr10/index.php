@@ -21,7 +21,11 @@ function characterData($parser, $data) {
 xml_set_element_handler($xml_parser, "startElement", "endElement");
 xml_set_character_data_handler($xml_parser, "characterData");
 
-$rss_feed = file_get_contents('rss_feed.xml');
+$rss_feed = file_get_contents('https://www.pravda.com.ua/rss/view_news/');
+if ($rss_feed === FALSE) {
+    echo "Помилка при отриманні даних.";
+    exit;
+}
 
 if (!xml_parse($xml_parser, $rss_feed, true)) {
     die(sprintf("XML error: %s at line %d",

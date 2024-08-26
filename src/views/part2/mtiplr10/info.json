@@ -8,5 +8,10 @@
       "name": "PHP",
       "url": "index.php.text",
       "infotype": "php"
+    },
+    "2":{
+      "name": "PHP",
+      "url": "index.php",
+      "infotype": "result"
     }
 }
