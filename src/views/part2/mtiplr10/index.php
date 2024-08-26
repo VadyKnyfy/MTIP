@@ -2,20 +2,20 @@
 $xml_parser = xml_parser_create();
 
 function startElement($parser, $name, $attrs) {
-    echo "<$name>";
+    echo "Відкритий тег: $name\n";
     if (!empty($attrs)) {
         foreach ($attrs as $key => $value) {
-            echo "$key = $value";
+            echo "Атрибут: $key = $value\n";
         }
     }
 }
 
 function endElement($parser, $name) {
-    echo "</$name>";
+    echo "Закритий тег: $name\n";
 }
 
 function characterData($parser, $data) {
-    echo "$data";
+    echo "Текст: $data\n";
 }
 
 xml_set_element_handler($xml_parser, "startElement", "endElement");
