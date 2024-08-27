@@ -6,12 +6,8 @@
   },
   "routes": [
     {
-      "src": "/src/views/lr1/template.html",
-      "dest": "/api/src/views/lr1/template.html"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "/api/src/views/lr1/template.html"
     }
   ]
 }
