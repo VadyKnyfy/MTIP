@@ -1,6 +1,0 @@
-<?xml-stylesheet type="text/xsl" href="test.xsl"?>
-<source>
-    <bold>Hello, world.</bold>
-    <red>I am </red>
-    <italic>fine.</italic>
-</source>

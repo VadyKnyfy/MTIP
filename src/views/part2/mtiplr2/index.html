@@ -11,7 +11,7 @@
             $('#neighborhood').on('change', function() {
                 $('#pizzaStore').html('<option selected disabled value="default">Виберіть магазин</option>');
                 $.ajax({
-                    url: "/src/views/part2/mtiplr2/getShopOfDistrict.php",
+                    url: "api/getShopOfDistrict.php",
                     type: "GET",
                     data: { neighborhood: encodeURIComponent($(this).val()) },
                     success: function(response) {
