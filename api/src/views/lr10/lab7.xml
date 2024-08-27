@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EMPLOYEES>
+    <EMPLOYEE>
+        <LAST_NAME>Іванов</LAST_NAME>
+        <FIRST_NAME>Олег</FIRST_NAME>
+        <MIDDLE_NAME>Петрович</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>12345</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Київська область</REGION>
+            <DISTRICT>Київ</DISTRICT>
+            <CITY>Київ</CITY>
+            <STREET>Центральна</STREET>
+            <HOUSE>10</HOUSE>
+            <APARTMENT>25</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>1234567</HOME>
+            <MOBILE>987654321</MOBILE>
+            <MOBILE>987654121</MOBILE>
+        </PHONE>
+        <POSITION>Менеджер з продажів</POSITION>
+        <DEPARTMENT>Відділ продажів</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Сидоренко</LAST_NAME>
+        <FIRST_NAME>Максим</FIRST_NAME>
+        <MIDDLE_NAME>Володимирович</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>11111</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Львівська область</REGION>
+            <DISTRICT>Львів</DISTRICT>
+            <CITY>Львів</CITY>
+            <STREET>Проспект Шевченка</STREET>
+            <HOUSE>50Г</HOUSE>
+            <APARTMENT>8</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>7654321</HOME>
+            <MOBILE>987123456</MOBILE>
+        </PHONE>
+        <POSITION>IT спеціаліст</POSITION>
+        <DEPARTMENT>IT відділ</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Петров</LAST_NAME>
+        <FIRST_NAME>Анна</FIRST_NAME>
+        <MIDDLE_NAME>Олексіївна</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>54321</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Харківська область</REGION>
+            <DISTRICT>Харківський</DISTRICT>
+            <CITY>Харків</CITY>
+            <STREET>Сонячна</STREET>
+            <HOUSE>5Б</HOUSE>
+            <APARTMENT>12</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>9876543</HOME>
+            <MOBILE>123456789</MOBILE>
+        </PHONE>
+        <POSITION>Фінансовий аналітик</POSITION>
+        <DEPARTMENT>Фінансовий відділ</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Ковальчук</LAST_NAME>
+        <FIRST_NAME>Ірина</FIRST_NAME>
+        <MIDDLE_NAME>Анатоліївна</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>33333</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Одеська область</REGION>
+            <DISTRICT>Одеський</DISTRICT>
+            <CITY>Одеса</CITY>
+            <STREET>Фонтанська дорога</STREET>
+            <HOUSE>20</HOUSE>
+            <APARTMENT>17</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>5555555</HOME>
+            <MOBILE>999888777</MOBILE>
+        </PHONE>
+        <POSITION>HR менеджер</POSITION>
+        <DEPARTMENT>Відділ кадрів</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Григоренко</LAST_NAME>
+        <FIRST_NAME>Олексій</FIRST_NAME>
+        <MIDDLE_NAME>Михайлович</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>44444</INDEX>
+            <TYPE>Село</TYPE>
+            <REGION>Херсонська область</REGION>
+            <DISTRICT>Херсонський</DISTRICT>
+            <CITY>Змиевка</CITY>
+            <STREET>Садова</STREET>
+            <HOUSE>7</HOUSE>
+            <APARTMENT>4</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>7777777</HOME>
+            <MOBILE>111222333</MOBILE>
+        </PHONE>
+        <POSITION>Фізичний тренер</POSITION>
+        <DEPARTMENT>Спортивний відділ</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Дмитренко</LAST_NAME>
+        <FIRST_NAME>Віктор</FIRST_NAME>
+        <MIDDLE_NAME>Павлович</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>50150</INDEX>
+            <TYPE>Село</TYPE>
+            <REGION>Дніпропетровська область</REGION>
+            <DISTRICT>Криворізький</DISTRICT>
+            <CITY>Львов</CITY>
+            <STREET>Сіктор</STREET>
+            <HOUSE>15</HOUSE>
+            <APARTMENT>1</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>7777777</HOME>
+            <MOBILE>111222333</MOBILE>
+            <MOBILE>0954216542</MOBILE>
+        </PHONE>
+        <POSITION>Тренер</POSITION>
+        <DEPARTMENT>Спортивний відділ</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Глобавич</LAST_NAME>
+        <FIRST_NAME>Зінаїда</FIRST_NAME>
+        <MIDDLE_NAME>Павловна</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>50150</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Дніпропетровська область</REGION>
+            <DISTRICT>Криворізький</DISTRICT>
+            <CITY>Кривий Ріг</CITY>
+            <STREET>Рій</STREET>
+            <HOUSE>5</HOUSE>
+            <APARTMENT>10</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>5555555</HOME>
+            <MOBILE>0985843622</MOBILE>
+        </PHONE>
+        <POSITION>Маркетолог</POSITION>
+        <DEPARTMENT>Відділ продаж</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Глобавич</LAST_NAME>
+        <FIRST_NAME>Анастасія</FIRST_NAME>
+        <MIDDLE_NAME>Павловна</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>50150</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Дніпропетровська область</REGION>
+            <DISTRICT>Криворізький</DISTRICT>
+            <CITY>Кривий Ріг</CITY>
+            <STREET>Рій</STREET>
+            <HOUSE>5</HOUSE>
+            <APARTMENT>10</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>5555555</HOME>
+            <MOBILE>0985843988</MOBILE>
+        </PHONE>
+        <POSITION>Маркетолог</POSITION>
+        <DEPARTMENT>Відділ продаж</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Глобавич</LAST_NAME>
+        <FIRST_NAME>Анастасія</FIRST_NAME>
+        <MIDDLE_NAME>Вікторівна</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>50120</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Дніпропетровська область</REGION>
+            <DISTRICT>Криворізький</DISTRICT>
+            <CITY>Кривий Ріг</CITY>
+            <STREET>Одружна</STREET>
+            <HOUSE>25</HOUSE>
+            <APARTMENT>95</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>5555555</HOME>
+            <MOBILE>0997258962</MOBILE>
+        </PHONE>
+        <POSITION>Маркетолог</POSITION>
+        <DEPARTMENT>Відділ продаж</DEPARTMENT>
+    </EMPLOYEE>
+    <EMPLOYEE>
+        <LAST_NAME>Миколій</LAST_NAME>
+        <FIRST_NAME>Владислав</FIRST_NAME>
+        <MIDDLE_NAME>Вадимович</MIDDLE_NAME>
+        <ADDRESS>
+            <INDEX>50050</INDEX>
+            <TYPE>Місто</TYPE>
+            <REGION>Дніпропетровська область</REGION>
+            <DISTRICT>Криворізький</DISTRICT>
+            <CITY>Кривий Ріг</CITY>
+            <STREET>Кропивницька</STREET>
+            <HOUSE>45</HOUSE>
+            <APARTMENT>5</APARTMENT>
+        </ADDRESS>
+        <PHONE>
+            <HOME>1955754</HOME>
+            <MOBILE>0678543215</MOBILE>
+        </PHONE>
+        <POSITION>Маркетолог</POSITION>
+        <DEPARTMENT>Відділ продаж</DEPARTMENT>
+    </EMPLOYEE>
+</EMPLOYEES>

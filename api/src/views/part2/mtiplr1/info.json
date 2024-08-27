@@ -1,0 +1,12 @@
+{
+    "0":{
+      "name": "Умова",
+      "url": "conditions.pdf#toolbar=0",
+      "infotype": "condition"
+    },
+    "1":{
+      "name": "Sessions",
+      "url": "session1.log",
+      "infotype": "markup"
+    }
+}
