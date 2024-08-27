@@ -9,8 +9,5 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ],
-  "ignore": [
-    "api/src"
   ]
 }
