@@ -16,7 +16,7 @@
     },
     "3":{
       "name": "Результат",
-      "url": "index.php",
+      "url": "api/index.php",
       "infotype": "result"
     }
 }
