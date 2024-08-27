@@ -1,0 +1,22 @@
+{
+    "0":{
+      "name": "Умова",
+      "url": "conditions.pdf#toolbar=0",
+      "infotype": "condition"
+    },
+    "1":{
+      "name": "HTML",
+      "url": "index.html",
+      "infotype": "markup"
+    },
+    "2":{
+      "name": "PHP",
+      "url": "news.php.text",
+      "infotype": "php"
+    },
+    "3":{
+      "name": "Результат",
+      "url": "index.html",
+      "infotype": "result"
+    }
+}

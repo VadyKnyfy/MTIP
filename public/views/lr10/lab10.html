@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота 10.1</title>
+</head>
+<script language="JavaScript">
+    fetch('lab7.xml')
+        .then(response => response.text())
+        .then(xmlString => {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+            for(let i=0;i<21;i++){
+                if(xmlDoc.documentElement.childNodes.item(i).textContent==="\n    "){
+                    document.write("<br>");
+                }else{
+                    document.write(xmlDoc.documentElement.childNodes.item(i).textContent);
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Помилка завантаження або обробки XML:', error);
+        });
+
+
+</script>
+</html>

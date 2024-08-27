@@ -1,0 +1,33 @@
+
+ {
+    "0":{
+      "name": "Умова",
+      "url": "conditions.pdf#toolbar=0",
+      "infotype": "condition"
+    },
+    "1":{
+      "name": "Результат-1",
+      "url": "lab2_1/template.html",
+      "infotype": "result"
+    },
+    "2":{
+      "name": "Результат-2",
+      "url": "lab2_2/template.html",
+      "infotype": "result"
+    },
+    "3":{
+      "name": "HTML-1",
+      "url": "lab2_1/template.html",
+      "infotype": "markup"
+    },
+    "4":{
+      "name": "HTML-2",
+      "url": "lab2_2/template.html",
+      "infotype": "markup"
+    },
+    "5":{
+      "name": "CSS-1",
+      "url": "lab2_1/template.css",
+      "infotype": "css"
+    }
+  }

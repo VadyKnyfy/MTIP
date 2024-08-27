@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+        }
+
+        form {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        p {
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        form p, form input {
+            margin: 0 0 10px;
+        }
+
+        form input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+    <!-- Підключення jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<form id="z1">
+    <p>1. Дано два числа. Знайти середнє арифметичне їх квадратів та середнє арифметичне їх модулів.</p>
+    Перше число : <input type="text" name="val1"><br>
+    Друге число : <input type="text" name="val2"><br>
+    <input type="submit" name="submit" value="Обчислити">
+    <p>Результат:</p>
+    <div id="result1"></div>
+</form>
+<form id="z2">
+    <p>2. Обчислити значення у, де y = ((x + 1)^2 + 2 (x + 1))/4. Значення змінної х введіть із клавіатури.</p>
+    x= : <input type="text" name="x"><br>
+    <input type="submit" name="submit" value="Обчислити">
+    <p>Результат:</p>
+    <div id="result2"></div>
+</form>
+<form id="z3">
+    <p>3. Перевірити істинність вислову: «Точка з координатами (x, y) лежить усередині прямокутника, ліва верхня вершина якого має координати (x 1 , y 1 ), права нижня - (x 2 , y 2 ), а сторони паралельні координатним вісям» .</p>
+    x= : <input type="text" name="x"><br>
+    y= : <input type="text" name="y"><br>
+    x1= : <input type="text" name="x1"><br>
+    y1= : <input type="text" name="y1"><br>
+    x2= : <input type="text" name="x2"><br>
+    y2= : <input type="text" name="y2"><br>
+    <input type="submit" name="submit" value="Обчислити">
+    <p>Результат:</p>
+    <div id="result3"></div>
+</form>
+
+<script>
+    $(document).ready(function() {
+        $('#z1').submit(function(event) {
+            event.preventDefault();
+            let val1 = parseFloat($(this).find('input[name="val1"]').val());
+            let val2 = parseFloat($(this).find('input[name="val2"]').val());
+            if (isNaN(val1) || isNaN(val2)) {
+                alert('Будь ласка, введіть дійсні числа.');
+                return;
+            }
+            $.ajax({
+                url:'/src/views/part2/mtiplr4/calc.php',
+                method:'POST',
+                data:{
+                    action:'z1',
+                    data:{
+                        val1:val1,
+                        val2:val2,
+                    }
+                },
+                success: function(response) {
+                    $('#result1').text(`Середнє арифметичне квадратів: ${response.mOs}\nСереднє арифметичне модулів: ${response.meanOAV}`);
+                }
+            })
+        });
+
+        $('#z2').submit(function(event) {
+            event.preventDefault();
+            let x = parseFloat($(this).find('input[name="x"]').val());
+            if (isNaN(x)) {
+                alert('Будь ласка, введіть дійсне число для x.');
+                return;
+            }
+            $.ajax({
+                url:'/src/views/part2/mtiplr4/calc.php',
+                method:'POST',
+                data:{
+                    action:'z2',
+                    data:{
+                        x:x
+                    }
+                },
+                success: function(response) {
+                    $('#result2').text(`Результат: ${response.y}`);
+                }
+            })
+        });
+
+        $('#z3').submit(function(event) {
+            event.preventDefault();
+            let x = parseFloat($(this).find('input[name="x"]').val());
+            let y = parseFloat($(this).find('input[name="y"]').val());
+            let x1 = parseFloat($(this).find('input[name="x1"]').val());
+            let y1 = parseFloat($(this).find('input[name="y1"]').val());
+            let x2 = parseFloat($(this).find('input[name="x2"]').val());
+            let y2 = parseFloat($(this).find('input[name="y2"]').val());
+            if (isNaN(x) || isNaN(y) || isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) {
+                alert('Будь ласка, введіть дійсні числа.');
+                return;
+            }
+            $.ajax({
+                url:'/src/views/part2/mtiplr4/calc.php',
+                method:'POST',
+                data:{
+                    action:'z3',
+                    data:{
+                        x:x,
+                        y:y,
+                        x1:x1,
+                        y1:y1,
+                        x2:x2,
+                        y2:y2
+                    }
+                },
+                success: function(response) {
+                    $('#result3').text(response.answer ? 'Точка лежить усередині прямокутника.' : 'Точка не лежить усередині прямокутника.');
+                }
+            })
+            // let isInside = x >= x1 && x <= x2 && y >= y1 && y <= y2;
+        });
+    });
+</script>
+</body>
+</html>
