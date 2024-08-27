@@ -7,7 +7,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/views/lr1/template.html"
+      "dest": "/src/views/lr1/template.html"
     }
   ]
 }

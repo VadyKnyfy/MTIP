@@ -1,38 +1,38 @@
 {
   "1": {
     "name": "Лабораторна номер 2",
-    "url": "/views/part2/mtiplr2/"
+    "url": "/src/views/lr2/"
   },
   "2": {
     "name": "Лабораторна номер 3",
-    "url": "/views/part2/mtiplr3/"
+    "url": "/src/views/lr3/"
   },
   "3": {
     "name": "Лабораторна номер 4",
-    "url": "/views/part2/mtiplr4/"
+    "url": "/src/views/lr4/"
   },
   "4": {
     "name": "Лабораторна номер 5",
-    "url": "/views/part2/mtiplr5/"
+    "url": "/src/views/lr5/"
   },
   "5": {
     "name": "Лабораторна номер 6",
-    "url": "/views/part2/mtiplr6/"
+    "url": "/src/views/lr6/"
   },
   "6": {
     "name": "Лабораторна номер 7",
-    "url": "/views/part2/mtiplr7/"
+    "url": "/src/views/lr7/"
   },
   "7": {
     "name": "Лабораторна номер 8",
-    "url": "/views/part2/mtiplr8/"
+    "url": "/src/views/lr8/"
   },
   "8": {
     "name": "Лабораторна номер 9",
-    "url": "/views/part2/mtiplr9/"
+    "url": "/src/views/lr9/"
   },
   "9": {
     "name": "Лабораторна номер 10",
-    "url": "/views/part2/mtiplr10/"
+    "url": "/src/views/lr10/"
   }
 }
