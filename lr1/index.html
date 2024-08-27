@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №1</title>
+    <link rel="stylesheet" href="/src/views/lr1/template.css" />
+    <link rel="stylesheet" href="template.css" />
+    <link rel="stylesheet" href="/src/prism/prism.css" />
+    <link rel="stylesheet" href="/src/prism/line-number/prism-line-numbers.css" data-noprefix />
+</head>
+<body class="modal-open">
+<header>
+</header>
+
+<!-- Модальне вікно -->
+<dialog id="semesterModal">
+    <div class="modal-content">
+        <h2>Виберіть семестр</h2>
+        <button data-semester="1">Семестр 1</button>
+        <button data-semester="2">Семестр 2</button>
+    </div>
+</dialog>
+
+<main style="display:none;"> <!-- Сховати основний вміст сторінки до вибору семестру -->
+    <div class="aside">
+        <div id="nav_menu1" class="nav_menu">
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="lab_header">
+            <h1>Звіт</h1>
+            <h2>про лабораторні роботи з курсу</h2>
+            <h2>"Сучасні технології Інтернет-програмування"</h2>
+            <h2>студента групи ІПЗ-22ск</h2>
+            <h2>Бризгалова Вадима Віталійовича</h2>
+        </div>
+        <div id="lab_info">
+            <div id="lab_menu">
+                <div class="menu_select selected" infotype = "condition" infourl="conditions.pdf#toolbar=0">
+                    Умова
+                </div>
+                <div class="menu_select" infotype = "markup" infourl="template.html">
+                    HTML
+                </div>
+                <div class="menu_select" infotype = "javascript" infourl="template.js" >
+                    JS
+                </div>
+                <div class="menu_select" infotype = "css" infourl="template.css">
+                    CSS
+                </div>
+                <div class="menu_select" infotype = "json" infourl="info.json">
+                    JSON-1
+                </div>
+                <div class="menu_select" infotype = "json" infourl="lab.json">
+                    JSON-2
+                </div>
+            </div>
+            <div id="info_container">
+                <embed src="/src/views/lr1/conditions.pdf#toolbar=0" width="100%" height="100%" id="pdfEmbed">
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/src/prism/prism.js"></script>
+<script src="/src/prism/line-number/prism-line-numbers.js"></script>
+<script src="/src/views/lr1/template.js"></script>
+</body>
+</html>
