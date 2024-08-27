@@ -1,12 +1,12 @@
-let selectedlaburlP ="/src/views/lr1/";
+let selectedlaburlP ="/views/lr1/";
 function initFunction(semestr){
     switch (semestr){
         case 1,"1":{
-            selectedlaburlP ="/src/views/lr1/";
-            $("#nav_menu1").html('<div class="select_item selected" laburl="/src/views/lr1/"> <p>Лабораторна номер 1</p></div>');
+            selectedlaburlP ="/views/lr1/";
+            $("#nav_menu1").html('<div class="select_item selected" laburl="/views/lr1/"> <p>Лабораторна номер 1</p></div>');
             let labinfodata
             $.ajax({
-                url: '/src/views/lr1/lab.json',
+                url: '/views/lr1/lab.json',
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
@@ -32,8 +32,8 @@ function initFunction(semestr){
             break;
         }
         case 2,"2":{
-            selectedlaburlP ="/src/views/part2/mtiplr1/";
-            $("#nav_menu1").html('<div class="select_item selected" laburl="/src/views/part2/mtiplr1/"> <p>Лабораторна номер 1</p></div>');
+            selectedlaburlP ="/views/part2/mtiplr1/";
+            $("#nav_menu1").html('<div class="select_item selected" laburl="/views/part2/mtiplr1/"> <p>Лабораторна номер 1</p></div>');
             $.ajax({
                 url: selectedlaburlP+'info.json',
                 type: 'GET',
@@ -61,7 +61,7 @@ function initFunction(semestr){
             })
             let labinfodata
             $.ajax({
-                url: '/src/views/part2/lab.json',
+                url: '/views/part2/lab.json',
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
