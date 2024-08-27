@@ -1,4 +1,4 @@
 <?php
-$redirect_url = '/src/views/lr1/template.html';
+$redirect_url = '/api/src/views/lr1/template.html';
 header('Location: ' . $redirect_url);
 exit;
